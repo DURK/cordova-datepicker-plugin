@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.apache.cordova.plugin.datepicker"
-    version="1.0.1">
+    version="1.0.2">
 
     <name>Datepicker</name>
     <description>Cordova Datepicker Plugin</description>
@@ -13,7 +13,7 @@
     <author>Dirk-Jan Hoek</author>
 
     <js-module src="www/datepicker.js" name="Datepicker">
-        <clobbers target="datePicker" />
+        <clobbers target="window.datePicker" />
     </js-module>
 
     <!-- android -->
