@@ -51,11 +51,7 @@ var DatePicker = (function (gap) {
         if (gap.addPlugin) {
             gap.addPlugin("datePicker", DatePicker);
         } else {
-            if (!window.plugins) {
-                window.plugins = {};
-            }
-
-            window.plugins.datePicker = new DatePicker();
+            window.datePicker = new DatePicker();
         }
     });
 
