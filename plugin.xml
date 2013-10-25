@@ -23,4 +23,15 @@
         </config-file>
         <source-file src="src/android/Datepicker.java" target-dir="src/nl/moreapps/datepicker" />
     </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Datepicker">
+                <param name="ios-package" value="Datepicker"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Datepicker.h" />
+        <source-file src="src/ios/Datepicker.m" />
+    </platform>
 </plugin>
