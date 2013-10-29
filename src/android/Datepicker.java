@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.apache.cordova.datepicker;
+package nl.moreapps.datepicker;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

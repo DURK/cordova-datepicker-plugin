@@ -1,0 +1,13 @@
+{
+    "version": "1.0.2",
+    "name": "nl.moreapps.datepicker",
+    "cordova_name": "Datepicker",
+    "description": "Cordova Datepicker Plugin (iOS + Android)",
+    "license": "Apache 2.0",
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}
