@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="org.apache.cordova.plugin.datepicker"
-    version="1.0.1">
-
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="nl.moreapps.datepicker"
+        version="1.0.1">
     <name>Datepicker</name>
-    <description>Cordova Datepicker Plugin</description>
+    <description>Cordova Datepicker Plugin (iOS + Android)</description>
     <license>Apache 2.0</license>
     <keywords>cordova,datepicker</keywords>
     <author>Dirk-Jan Hoek</author>
 
-    <js-module src="www/datepicker.js" name="Datepicker">
-        <clobbers target="window.datePicker" />
-    </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Datepicker">
-                <param name="android-package" value="org.apache.cordova.datepicker.Datepicker"/>
+                <param name="android-package" value="nl.moreapps.datepicker.Datepicker"/>
             </feature>
         </config-file>
+        <js-module src="www/datepicker.js" name="Datepicker">
+            <clobbers target="window.datePicker" />
+        </js-module>
+        <source-file src="src/android/Datepicker.java" target-dir="src/nl/moreapps/datepicker" />
+    </platform>
 
-        <source-file src="src/android/Datepicker.java" target-dir="src/org/apache/cordova/datepicker" />
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Datepicker">
+                <param name="ios-package" value="Datepicker"/>
+            </feature>
+        </config-file>
+        <js-module src="www/ios/datepicker.js" name="Datepicker">
+            <clobbers target="window.datePicker" />
+        </js-module>
+        <header-file src="src/ios/Datepicker.h" />
+        <source-file src="src/ios/Datepicker.m" />
     </platform>
 </plugin>
